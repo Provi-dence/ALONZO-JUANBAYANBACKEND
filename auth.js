@@ -13,7 +13,7 @@ passport.use(new GoogleStrategy({
     console.log(profile);
     return done(null, profile);
   }
-));
+));   
 
 passport.serializeUser((user, done) => {
   done(null, user);

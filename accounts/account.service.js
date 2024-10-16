@@ -94,7 +94,7 @@ async function register(params, origin) {
 
     // Create account object
     const account = new db.Account(params);
-
+    
     // First registered account is an admin
     const isFirstAccount = (await db.Account.count()) === 0;
     account.acc_role = isFirstAccount ? Role.Admin : Role.User;

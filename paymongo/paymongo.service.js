@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const PAYMONGO_SECRET_KEY = 'sk_test_your_secret_key';  // Use your actual secret key
+const PAYMONGO_SECRET_KEY = 'sk_test_xHG4pdmu4r2fx7F9gxTtNqzVey';  // Use your actual secret key
 
 exports.createPaymentIntent = async function(amount) {
     try {

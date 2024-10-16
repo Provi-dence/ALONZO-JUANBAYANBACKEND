@@ -74,4 +74,12 @@ app.listen(port, () => console.log('Server listening on port ' + port));
 
 
 
-
+app.post('/logout', (req, res) => {
+    res.clearCookie('refreshToken'); // Clear the refresh token cookie
+    req.session.destroy(err => {
+        if (err) {
+            return res.status(500).json({ message: 'Error logging out' });
+        }
+        res.json({ message: 'Logged out successfully' });
+    });
+});
